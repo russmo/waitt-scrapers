@@ -30,6 +30,7 @@ setup(
       'geojson',
       'pandas',
       'xlrd',
+      'openpyxl',
     ],
     extras_require={
         'dev': [],
