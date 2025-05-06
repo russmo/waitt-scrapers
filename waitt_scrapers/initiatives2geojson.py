@@ -53,7 +53,12 @@ def initiatives2geojson(outfile, xlsx_url=sheet_url_xlsx):
                     "image_url": str(row["Hero Image URL"]),
                     "legacy": (
                         str(row["Legacy"])
-                        if "Legacy" in row.index  # alternative df.columns
+                        if "Legacy" in row.index
+                        else str(row["Pilot"])
+                    ),
+                    "pilot": (
+                        str(row["Legacy"])
+                        if "Legacy" in row.index
                         else str(row["Pilot"])
                     ),
                     "label_anchor": str(row["Label Anchor"]),
